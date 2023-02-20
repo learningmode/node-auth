@@ -1,7 +1,7 @@
 ## NODE AUTHENTICATION
 
 ## LIBRARIES USED
-dotenv -> Environment variables
-morgan  -> logs requests in console
-http-errors -> http errors with status 
-nodemon -> watcher for changes made to js files
+dotenv -> Environment variables <br/>
+morgan  -> logs requests in console <br/>
+http-errors -> http errors with status <br/>
+nodemon -> watcher for changes made to js files <br/>
