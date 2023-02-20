@@ -2,6 +2,8 @@ const express = require('express');
 const morgan = require('morgan');
 const createError = require('http-errors');
 require('dotenv').config();
+const AuthRoute = require('./routes/auth.route');
+
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -13,6 +15,8 @@ app.listen(port,()=>{
 app.get('/',async(req,res,next)=>{
    res.send('Hello from express');   
 });
+
+app.use('/auth',AuthRoute);
 
 app.use(async(req,res,next)=>{
     // const error = new Error('Route not found');
