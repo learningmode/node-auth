@@ -15,9 +15,11 @@ app.get('/',async(req,res,next)=>{
 });
 
 app.use(async(req,res,next)=>{
-    const error = new Error('Route not found');
-    error.status=404;
-    next(error);
+    // const error = new Error('Route not found');
+    // error.status=404;
+    // next(error);
+    //NOTE: OR below
+    next(createError.NotFound('Route is not found'));
 })
 
 app.use((err,req,res,next)=> {
