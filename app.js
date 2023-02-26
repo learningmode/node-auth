@@ -9,6 +9,10 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 app.use(morgan('dev'));
+//parse body in json format
+app.use(express.json());
+// using form url encoded data
+app.use(express.urlencoded({extended:true}));
 app.listen(port,()=>{
     console.log(`Server running on ${port}`);
 });

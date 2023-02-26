@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const mongoose = require('mongoose');
 
 mongoose.connect(process.env.MONGODB_URI,{dbName:'auth_tutorial',useNewUrlParser:true,useUnifiedTopology:true}).then(()=>{
